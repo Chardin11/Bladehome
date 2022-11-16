@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController; //had to add this in go down file path cap each folder
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MovieController::class, 'index']);
